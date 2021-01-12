@@ -1,0 +1,8 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+@prefix index: <>
+@prefix fm: <./ontology.owl>
+
+index: rdf:type fm:index.
+
+index: fm:referencedInformation <https://gitlab.com/UM-CDS/projects/FAIRcomml/model_descriptions/-/raw/1-describe-stiphout-model-in-rdf-triples/stiphout_2011/stiphout_2011.ttl>.
