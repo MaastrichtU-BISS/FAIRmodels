@@ -5,4 +5,4 @@
 
 index: rdf:type fm:index.
 
-index: fm:referencedInformation <https://github.com/MaastrichtU-CDS/FAIRmodels/raw/main/models/radiotherapy/stiphout_2011.ttl>.
+index: fm:referencedInformation <https://fairmodels.org/models/radiotherapy/stiphout_2011.ttl>.
