@@ -9,7 +9,7 @@
 @prefix uo: <http://purl.obolibrary.org/obo/UO_>.
 @prefix time: <http://www.w3.org/2006/time#>.
 
-model:stiphout_2011_clinical rdf:type fml:Model;
+model: rdf:type fml:Model;
     rdfs:label "Rectal cancer pCR model by van Stiphout et al.";
     fml:contains_algorithm model:stiphout_2011_clinical_algorithm;
     fml:needs_information_element model:ctInformationElement;
