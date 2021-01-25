@@ -29,7 +29,7 @@ model:cnInformationElement rdf:type fml:InformationElement;
     fml:is_variable_type model:category.
 
 model:tLengthInformationElement rdf:type fml:InformationElement;
-    rdf:type ncit:C100074;
+    rdf:type roo:C100074;
     fml:is_variable_type model:category.
 
 model:stiphout_2011_clinical_algorithm rdf:type fml:Logistic_Regression;
