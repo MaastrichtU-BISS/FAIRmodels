@@ -5,4 +5,8 @@
 
 index: rdf:type fm:index.
 
+# add referenced ontologies used in model descriptions
+index: fm:referencedInformation <https://raw.githubusercontent.com/RadiationOncologyOntology/ROO/master/owl/ROO.owl>.
+
+# add models
 index: fm:referencedInformation <https://raw.githubusercontent.com/MaastrichtU-CDS/FAIRmodels/main/models/radiotherapy/stiphout_2011.ttl>.
