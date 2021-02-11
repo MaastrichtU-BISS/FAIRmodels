@@ -1,73 +1,68 @@
 <?xml version="1.0"?>
-<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+<rdf:RDF xmlns="https://fairmodels.org/ontology.owl#"
      xml:base="https://fairmodels.org/ontology.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="https://fairmodels.org/ontology.owl">
-    <Prefix name="" IRI="https://fairmodels.org/ontology.owl#"/>
-    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
-    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
-    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
-    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
-    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <Literal>FAIRmodels.org Ontology</Literal>
-    </Annotation>
-    <Declaration>
-        <Class IRI="#Logistic_Regression"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Machine_Learning_Model"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Variable_Type"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#category"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#numeric"/>
-    </Declaration>
-    <SubClassOf>
-        <Class IRI="#Logistic_Regression"/>
-        <Class IRI="#Machine_Learning_Model"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#category"/>
-        <Class IRI="#Variable_Type"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#numeric"/>
-        <Class IRI="#Variable_Type"/>
-    </SubClassOf>
-    <DisjointClasses>
-        <Class IRI="#category"/>
-        <Class IRI="#numeric"/>
-    </DisjointClasses>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Logistic_Regression</IRI>
-        <Literal>Logistic Regression</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Variable_Type</IRI>
-        <Literal>Variable Type</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#category</IRI>
-        <Literal>Categorical variable</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#numeric</IRI>
-        <Literal>Numeric variable</Literal>
-    </AnnotationAssertion>
-</Ontology>
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://fairmodels.org/ontology.owl">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FAIRmodels.org Ontology</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://fairmodels.org/ontology.owl#Logistic_Regression -->
+
+    <owl:Class rdf:about="https://fairmodels.org/ontology.owl#Logistic_Regression">
+        <rdfs:subClassOf rdf:resource="https://fairmodels.org/ontology.owl#Machine_Learning_Model"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Logistic Regression</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://fairmodels.org/ontology.owl#Machine_Learning_Model -->
+
+    <owl:Class rdf:about="https://fairmodels.org/ontology.owl#Machine_Learning_Model"/>
+    
+
+
+    <!-- https://fairmodels.org/ontology.owl#Variable_Type -->
+
+    <owl:Class rdf:about="https://fairmodels.org/ontology.owl#Variable_Type">
+        <rdfs:label>Variable Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://fairmodels.org/ontology.owl#category -->
+
+    <owl:Class rdf:about="https://fairmodels.org/ontology.owl#category">
+        <rdfs:subClassOf rdf:resource="https://fairmodels.org/ontology.owl#Variable_Type"/>
+        <owl:disjointWith rdf:resource="https://fairmodels.org/ontology.owl#numeric"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Categorical variable</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://fairmodels.org/ontology.owl#numeric -->
+
+    <owl:Class rdf:about="https://fairmodels.org/ontology.owl#numeric">
+        <rdfs:subClassOf rdf:resource="https://fairmodels.org/ontology.owl#Variable_Type"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Numeric variable</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
 
 
 
