@@ -53,15 +53,15 @@ model:intercept rdf:type model:Intercept;
 
 model:multiplicationfactor_cT rdf:type model:multiplication_factor;
     fml:Primary_operation_value_reference model:InputFeature_cTStage;
-    fml:secondary_operation_value "−0.074"^^xsd:decimal.
+    fml:secondary_operation_value "-0.074"^^xsd:decimal.
 
 model:multiplicationfactor_cN rdf:type model:multiplication_factor;
     fml:Primary_operation_value_reference model:InputFeature_cNStage;
-    fml:secondary_operation_value "−0.060"^^xsd:decimal.
+    fml:secondary_operation_value "-0.060"^^xsd:decimal.
 
 model:multiplicationfactor_tLength rdf:type model:multiplication_factor;
     fml:Primary_operation_value_reference model:InputFeature_TLength;
-    fml:secondary_operation_value "−0.085"^^xsd:decimal.
+    fml:secondary_operation_value "-0.085"^^xsd:decimal.
 
 model:InputFeature_TLength rdf:type fml:Algorithm_Input_Parameter;
     fml:model_parameter_name "tLength";
