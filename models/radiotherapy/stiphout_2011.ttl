@@ -49,7 +49,7 @@ model:lp_operation rdf:type fml:Addition;
     fml:Secondary_operation_value_reference model:multiplicationfactor_tLength.
 
 model:intercept rdf:type model:Intercept;
-    model:has_value "-0.60"^^xsd:decimal.
+    fml:has_value "-0.60"^^xsd:decimal.
 
 model:multiplicationfactor_cT rdf:type model:multiplication_factor;
     fml:Primary_operation_value_reference model:InputFeature_cTStage;
