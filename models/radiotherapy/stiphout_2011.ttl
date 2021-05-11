@@ -101,6 +101,26 @@ model:InputFeature_cTStage rdf:type fml:Algorithm_Input_Parameter;
 model:InputFeature_cNStage rdf:type fml:Algorithm_Input_Parameter;
     fml:model_parameter_name "cN";
     fml:is_variable_type model:numeric;
+    fml:has_translation [
+        rdf:type fml:value_translation;
+        fml:source_object [ rdf:type ncit:C48705; ];
+        fml:target_value "0"^^xsd:integer;
+    ];
+    fml:has_translation [
+        rdf:type fml:value_translation;
+        fml:source_object [ rdf:type ncit:C48706; ];
+        fml:target_value "1"^^xsd:integer;
+    ];
+    fml:has_translation [
+        rdf:type fml:value_translation;
+        fml:source_object [ rdf:type ncit:C48786; ];
+        fml:target_value "2"^^xsd:integer;
+    ];
+    fml:has_translation [
+        rdf:type fml:value_translation;
+        fml:source_object [ rdf:type ncit:C48714; ];
+        fml:target_value "3"^^xsd:integer;
+    ];
     fml:based_on_information_element model:cnInformationElement.
 
 model:OutputFeature_ypT0N0 rdf:type fml:Probability;
