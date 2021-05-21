@@ -11,3 +11,4 @@ index: fm:referencedInformation <https://raw.githubusercontent.com/MaastrichtU-C
 
 # add models
 index: fm:referencedInformation <https://raw.githubusercontent.com/MaastrichtU-CDS/FAIRmodels/main/models/radiotherapy/stiphout_2011.ttl>.
+index: fm:referencedInformation <https://raw.githubusercontent.com/maastroclinic/PROTRAIT-models/main/ntcp_xerostomia.ttl>.
