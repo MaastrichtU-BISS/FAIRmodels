@@ -23,6 +23,22 @@
     
 
 
+    <!-- https://fairmodels.org/ontology.owl#Done -->
+
+    <owl:Class rdf:about="https://fairmodels.org/ontology.owl#Done">
+        <rdfs:subClassOf rdf:resource="https://fairmodels.org/ontology.owl#Execution_Status"/>
+        <owl:disjointWith rdf:resource="https://fairmodels.org/ontology.owl#Requested"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Done</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://fairmodels.org/ontology.owl#Execution_Status -->
+
+    <owl:Class rdf:about="https://fairmodels.org/ontology.owl#Execution_Status"/>
+    
+
+
     <!-- https://fairmodels.org/ontology.owl#Logistic_Regression -->
 
     <owl:Class rdf:about="https://fairmodels.org/ontology.owl#Logistic_Regression">
@@ -35,6 +51,15 @@
     <!-- https://fairmodels.org/ontology.owl#Machine_Learning_Model -->
 
     <owl:Class rdf:about="https://fairmodels.org/ontology.owl#Machine_Learning_Model"/>
+    
+
+
+    <!-- https://fairmodels.org/ontology.owl#Requested -->
+
+    <owl:Class rdf:about="https://fairmodels.org/ontology.owl#Requested">
+        <rdfs:subClassOf rdf:resource="https://fairmodels.org/ontology.owl#Execution_Status"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Requested</rdfs:label>
+    </owl:Class>
     
 
 
