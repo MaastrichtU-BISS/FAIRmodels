@@ -1,6 +1,6 @@
 # FAIRmodels
 
-Welcome to the FAIRmodels website. This is currently just a placeholder for the [index.ttl](index.ttl) file.
+Welcome to the FAIRmodels website. This is currently just a placeholder for the [index.ttl](index.ttl) file and the main [ontology.owl](ontology.owl) (work-in-progress).
 
 ## Using the index
 To search the indexed models, you can download and run the [FAIR model browser](https://github.com/MaastrichtU-CDS/Model-Browser). This browser fetches all referenced models from the [index.ttl](index.ttl), and makes these indexed models searcheable.
