@@ -1,0 +1,15 @@
+version: '3'
+services:
+  brwsr:
+    image: clariah/brwsr:latest
+    ports:
+      - "127.0.0.1:5000:5000"
+    volumes:
+      - ./ontology.owl:/ontology.owl
+    environment:
+      - LOCAL_STORE=True
+      - LOCAL_FILE=/ontology.owl
+      - DEFAULT_BASE=https://fairmodels.org/ontology
+      - LOCAL_SERVER_NAME=http://localhost:5000
+      - START_LOCAL_NAME=ontology.owl
+      - START_URI=DEFAULT_BASE + "/" + START_LOCAL_NAME
