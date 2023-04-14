@@ -1,0 +1,257 @@
+@prefix : <https://fairmodels.org/ontology/fairmodels.ttl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix wikidata: <http://www.wikidata.org/entity/> .
+@base <https://fairmodels.org/ontology/fairmodels.ttl> .
+
+<https://fairmodels.org/ontology/fairmodels.ttl> rdf:type owl:Ontology ;
+                                                  owl:versionIRI <https://fairmodels.org/ontology/fairmodels.ttl#0.1> ;
+                                                  rdfs:label "FAIRmodels.org Ontology"^^xsd:string .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://fairmodels.org/ontology/fairmodels.ttl#c4f8301f_b04a_45f7_a4ad_620e88355a51
+:c4f8301f_b04a_45f7_a4ad_620e88355a51 rdf:type owl:ObjectProperty ;
+                                      rdfs:domain :cf4fcf01_ef4c_4fe5_9ae2_461b0fe1d5b4 ;
+                                      rdfs:label "available_at"@nl .
+
+
+###  https://fairmodels.org/ontology/fairmodels.ttl#c64f1675_8574_40df_a2f5_d653817fd927
+:c64f1675_8574_40df_a2f5_d653817fd927 rdf:type owl:ObjectProperty ;
+                                      owl:inverseOf <https://fairmodels.org/ontology/fairmodels.ttl#0ffdf775_d734_4363_97ec_66b00c37296a> ;
+                                      rdfs:domain :cf4fcf01_ef4c_4fe5_9ae2_461b0fe1d5b4 ;
+                                      rdfs:range <https://fairmodels.org/ontology/fairmodels.ttl#785afe0a_a7e9_4466_bd5e_c53cdf46d967> ;
+                                      rdfs:label "product_of"@en .
+
+
+###  https://fairmodels.org/ontology/fairmodels.ttl#0ffdf775_d734_4363_97ec_66b00c37296a
+<https://fairmodels.org/ontology/fairmodels.ttl#0ffdf775_d734_4363_97ec_66b00c37296a> rdf:type owl:ObjectProperty ;
+                                                                                      rdfs:domain <https://fairmodels.org/ontology/fairmodels.ttl#785afe0a_a7e9_4466_bd5e_c53cdf46d967> ;
+                                                                                      rdfs:range :cf4fcf01_ef4c_4fe5_9ae2_461b0fe1d5b4 ;
+                                                                                      rdfs:label "produces"@en .
+
+
+###  https://fairmodels.org/ontology/fairmodels.ttl#2da4e339_1dfe_4301_9148_cdd9000f7590
+<https://fairmodels.org/ontology/fairmodels.ttl#2da4e339_1dfe_4301_9148_cdd9000f7590> rdf:type owl:ObjectProperty ;
+                                                                                      owl:inverseOf <https://fairmodels.org/ontology/fairmodels.ttl#4a51312a_51fc_46fd_9dba_ee05e90026e8> ;
+                                                                                      rdfs:range :cf4fcf01_ef4c_4fe5_9ae2_461b0fe1d5b4 ,
+                                                                                                 <https://fairmodels.org/ontology/fairmodels.ttl#179a6b39_c2a3_4e1b_945a_f2831b936589> ,
+                                                                                                 <https://fairmodels.org/ontology/fairmodels.ttl#2b67af40_9f49_4f9a_8b54_852f2b2649a9> ;
+                                                                                      rdfs:label "part_of"@en .
+
+
+###  https://fairmodels.org/ontology/fairmodels.ttl#4a51312a_51fc_46fd_9dba_ee05e90026e8
+<https://fairmodels.org/ontology/fairmodels.ttl#4a51312a_51fc_46fd_9dba_ee05e90026e8> rdf:type owl:ObjectProperty ;
+                                                                                      rdfs:domain :cf4fcf01_ef4c_4fe5_9ae2_461b0fe1d5b4 ,
+                                                                                                  <https://fairmodels.org/ontology/fairmodels.ttl#179a6b39_c2a3_4e1b_945a_f2831b936589> ,
+                                                                                                  <https://fairmodels.org/ontology/fairmodels.ttl#2b67af40_9f49_4f9a_8b54_852f2b2649a9> ;
+                                                                                      rdfs:label "has_part"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.wikidata.org/entity/Q1152135
+wikidata:Q1152135 rdf:type owl:Class ;
+                  rdfs:subClassOf wikidata:Q2539 ;
+                  rdfs:label "unsupervised learning"@en .
+
+
+###  http://www.wikidata.org/entity/Q11660
+wikidata:Q11660 rdf:type owl:Class ;
+                rdfs:label "artificial intelligence"@en .
+
+
+###  http://www.wikidata.org/entity/Q2539
+wikidata:Q2539 rdf:type owl:Class ;
+               rdfs:subClassOf wikidata:Q11660 ;
+               rdfs:label "machine learning"@en .
+
+
+###  http://www.wikidata.org/entity/Q33331221
+wikidata:Q33331221 rdf:type owl:Class ;
+                   rdfs:subClassOf wikidata:Q334384 ;
+                   rdfs:label "logistic regression"@en .
+
+
+###  http://www.wikidata.org/entity/Q334384
+wikidata:Q334384 rdf:type owl:Class ;
+                 rdfs:subClassOf wikidata:Q2539 ;
+                 rdfs:label "supervised learning"@en .
+
+
+###  https://fairmodels.org/ontology/fairmodels.ttl#a6bfa522_bca6_459e_8cbd_f781b9cd9943
+:a6bfa522_bca6_459e_8cbd_f781b9cd9943 rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://fairmodels.org/ontology/fairmodels.ttl#785afe0a_a7e9_4466_bd5e_c53cdf46d967> ;
+                                      rdfs:label "Product testing"@en .
+
+
+###  https://fairmodels.org/ontology/fairmodels.ttl#ac04ad68_1db4_4ea4_a5e9_f7b3f50f598e
+:ac04ad68_1db4_4ea4_a5e9_f7b3f50f598e rdf:type owl:Class ;
+                                      rdfs:subClassOf :fa8c1446_a037_4139_901c_796b6591e699 ;
+                                      rdfs:label "Product Owner"@en .
+
+
+###  https://fairmodels.org/ontology/fairmodels.ttl#ad72c309_e12f_46d7_ad67_df309204fcfb
+:ad72c309_e12f_46d7_ad67_df309204fcfb rdf:type owl:Class ;
+                                      rdfs:subClassOf :cf4fcf01_ef4c_4fe5_9ae2_461b0fe1d5b4 ;
+                                      rdfs:label "Software application"@en .
+
+
+###  https://fairmodels.org/ontology/fairmodels.ttl#cf4fcf01_ef4c_4fe5_9ae2_461b0fe1d5b4
+:cf4fcf01_ef4c_4fe5_9ae2_461b0fe1d5b4 rdf:type owl:Class ;
+                                      rdfs:label "Product"@en .
+
+
+###  https://fairmodels.org/ontology/fairmodels.ttl#e0290140_192f_4552_a57f_26cdd418757f
+:e0290140_192f_4552_a57f_26cdd418757f rdf:type owl:Class ;
+                                      rdfs:subClassOf :fa8c1446_a037_4139_901c_796b6591e699 ;
+                                      rdfs:label "Domain Expert"@en .
+
+
+###  https://fairmodels.org/ontology/fairmodels.ttl#e743b4ab_f5d9_4326_82c6_4ddfb1ff090f
+:e743b4ab_f5d9_4326_82c6_4ddfb1ff090f rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://fairmodels.org/ontology/fairmodels.ttl#785afe0a_a7e9_4466_bd5e_c53cdf46d967> ;
+                                      rdfs:label "Data Collection"@en .
+
+
+###  https://fairmodels.org/ontology/fairmodels.ttl#ea010530_8935_4005_bf8a_330593a58a92
+:ea010530_8935_4005_bf8a_330593a58a92 rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://fairmodels.org/ontology/fairmodels.ttl#3952e89a_bac3_4e3f_99ce_a103bdb727b0> ;
+                                      rdfs:label "Open question"@en .
+
+
+###  https://fairmodels.org/ontology/fairmodels.ttl#eb2367e9_09cf_4b59_b19a_a5130a2dedf4
+:eb2367e9_09cf_4b59_b19a_a5130a2dedf4 rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://fairmodels.org/ontology/fairmodels.ttl#785afe0a_a7e9_4466_bd5e_c53cdf46d967> ;
+                                      rdfs:label "Product deprecation"@en .
+
+
+###  https://fairmodels.org/ontology/fairmodels.ttl#f7f622c0_2539_4f90_a3f9_207a8a2aa1e5
+:f7f622c0_2539_4f90_a3f9_207a8a2aa1e5 rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://fairmodels.org/ontology/fairmodels.ttl#785afe0a_a7e9_4466_bd5e_c53cdf46d967> ;
+                                      rdfs:label "Product development"@en .
+
+
+###  https://fairmodels.org/ontology/fairmodels.ttl#fa8c1446_a037_4139_901c_796b6591e699
+:fa8c1446_a037_4139_901c_796b6591e699 rdf:type owl:Class ;
+                                      rdfs:label "Stakeholder"@en .
+
+
+###  https://fairmodels.org/ontology/fairmodels.ttl#ff32c37b_8e83_4e1d_ba5b_ab7d6d3401ab
+:ff32c37b_8e83_4e1d_ba5b_ab7d6d3401ab rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://fairmodels.org/ontology/fairmodels.ttl#785afe0a_a7e9_4466_bd5e_c53cdf46d967> ;
+                                      rdfs:label "Product implementation"@en .
+
+
+###  https://fairmodels.org/ontology/fairmodels.ttl#0e1c9a8f_d52e_4ee9_8f90_393fc72863c7
+<https://fairmodels.org/ontology/fairmodels.ttl#0e1c9a8f_d52e_4ee9_8f90_393fc72863c7> rdf:type owl:Class ;
+                                                                                      rdfs:subClassOf :cf4fcf01_ef4c_4fe5_9ae2_461b0fe1d5b4 ;
+                                                                                      rdfs:label "Questionnaire response"@en .
+
+
+###  https://fairmodels.org/ontology/fairmodels.ttl#1abcccf3_1146_4653_abd1_c27e26df9144
+<https://fairmodels.org/ontology/fairmodels.ttl#1abcccf3_1146_4653_abd1_c27e26df9144> rdf:type owl:Class ;
+                                                                                      rdfs:subClassOf <https://fairmodels.org/ontology/fairmodels.ttl#785afe0a_a7e9_4466_bd5e_c53cdf46d967> ;
+                                                                                      rdfs:label "Problem Definition"@en .
+
+
+###  https://fairmodels.org/ontology/fairmodels.ttl#1dc3f8f5_d3f4_49af_8dcf_1b7506762cdc
+<https://fairmodels.org/ontology/fairmodels.ttl#1dc3f8f5_d3f4_49af_8dcf_1b7506762cdc> rdf:type owl:Class ;
+                                                                                      rdfs:subClassOf :fa8c1446_a037_4139_901c_796b6591e699 ;
+                                                                                      rdfs:label "Data Engineer"@en .
+
+
+###  https://fairmodels.org/ontology/fairmodels.ttl#1eaf610c_0f47_4180_97fd_1c727ae1cc96
+<https://fairmodels.org/ontology/fairmodels.ttl#1eaf610c_0f47_4180_97fd_1c727ae1cc96> rdf:type owl:Class ;
+                                                                                      rdfs:subClassOf :fa8c1446_a037_4139_901c_796b6591e699 ;
+                                                                                      rdfs:label "Data Scientist"@en .
+
+
+###  https://fairmodels.org/ontology/fairmodels.ttl#1453a121_ee8a_4e61_9615_f1cfb0491d95
+<https://fairmodels.org/ontology/fairmodels.ttl#1453a121_ee8a_4e61_9615_f1cfb0491d95> rdf:type owl:Class ;
+                                                                                      rdfs:subClassOf :fa8c1446_a037_4139_901c_796b6591e699 ;
+                                                                                      rdfs:label "ML Engineer"@en .
+
+
+###  https://fairmodels.org/ontology/fairmodels.ttl#179a6b39_c2a3_4e1b_945a_f2831b936589
+<https://fairmodels.org/ontology/fairmodels.ttl#179a6b39_c2a3_4e1b_945a_f2831b936589> rdf:type owl:Class ;
+                                                                                      rdfs:label "Questionnaire"@en .
+
+
+###  https://fairmodels.org/ontology/fairmodels.ttl#2a48b7e8_ff79_4caa_8da0_6695a451bab8
+<https://fairmodels.org/ontology/fairmodels.ttl#2a48b7e8_ff79_4caa_8da0_6695a451bab8> rdf:type owl:Class ;
+                                                                                      rdfs:subClassOf <https://fairmodels.org/ontology/fairmodels.ttl#3952e89a_bac3_4e3f_99ce_a103bdb727b0> ;
+                                                                                      rdfs:label "Closed question"@en .
+
+
+###  https://fairmodels.org/ontology/fairmodels.ttl#2b67af40_9f49_4f9a_8b54_852f2b2649a9
+<https://fairmodels.org/ontology/fairmodels.ttl#2b67af40_9f49_4f9a_8b54_852f2b2649a9> rdf:type owl:Class ;
+                                                                                      rdfs:label "Section"@en .
+
+
+###  https://fairmodels.org/ontology/fairmodels.ttl#2641f9c1_41ad_4b48_a82e_774a1fd58e78
+<https://fairmodels.org/ontology/fairmodels.ttl#2641f9c1_41ad_4b48_a82e_774a1fd58e78> rdf:type owl:Class ;
+                                                                                      rdfs:subClassOf <https://fairmodels.org/ontology/fairmodels.ttl#785afe0a_a7e9_4466_bd5e_c53cdf46d967> ;
+                                                                                      rdfs:label "Model development"@en .
+
+
+###  https://fairmodels.org/ontology/fairmodels.ttl#35b591df_d2f7_4f2b_ab3f_a3d52138f666
+<https://fairmodels.org/ontology/fairmodels.ttl#35b591df_d2f7_4f2b_ab3f_a3d52138f666> rdf:type owl:Class ;
+                                                                                      rdfs:subClassOf <https://fairmodels.org/ontology/fairmodels.ttl#785afe0a_a7e9_4466_bd5e_c53cdf46d967> ;
+                                                                                      rdfs:label "Product monitoring"@en .
+
+
+###  https://fairmodels.org/ontology/fairmodels.ttl#3952e89a_bac3_4e3f_99ce_a103bdb727b0
+<https://fairmodels.org/ontology/fairmodels.ttl#3952e89a_bac3_4e3f_99ce_a103bdb727b0> rdf:type owl:Class ;
+                                                                                      rdfs:label "Question"@en .
+
+
+###  https://fairmodels.org/ontology/fairmodels.ttl#458f4f4b_d528_47c4_9a6f_905258eef8da
+<https://fairmodels.org/ontology/fairmodels.ttl#458f4f4b_d528_47c4_9a6f_905258eef8da> rdf:type owl:Class ;
+                                                                                      rdfs:subClassOf :cf4fcf01_ef4c_4fe5_9ae2_461b0fe1d5b4 ;
+                                                                                      rdfs:label "answer"@en .
+
+
+###  https://fairmodels.org/ontology/fairmodels.ttl#57cecd50_dd68_4932_974a_f60114d51169
+<https://fairmodels.org/ontology/fairmodels.ttl#57cecd50_dd68_4932_974a_f60114d51169> rdf:type owl:Class ;
+                                                                                      rdfs:subClassOf <https://fairmodels.org/ontology/fairmodels.ttl#785afe0a_a7e9_4466_bd5e_c53cdf46d967> ;
+                                                                                      rdfs:label "Model testing"@en .
+
+
+###  https://fairmodels.org/ontology/fairmodels.ttl#6844b5d7_c830_457a_94a9_12029b191521
+<https://fairmodels.org/ontology/fairmodels.ttl#6844b5d7_c830_457a_94a9_12029b191521> rdf:type owl:Class ;
+                                                                                      rdfs:subClassOf :fa8c1446_a037_4139_901c_796b6591e699 ;
+                                                                                      rdfs:label "Software Developer"@en .
+
+
+###  https://fairmodels.org/ontology/fairmodels.ttl#7c23f2b2_709f_48e1_a409_e5b788656ad9
+<https://fairmodels.org/ontology/fairmodels.ttl#7c23f2b2_709f_48e1_a409_e5b788656ad9> rdf:type owl:Class ;
+                                                                                      rdfs:subClassOf :fa8c1446_a037_4139_901c_796b6591e699 ;
+                                                                                      rdfs:label "Reviewer"@en .
+
+
+###  https://fairmodels.org/ontology/fairmodels.ttl#78122406_4c11_408a_948f_565df25c11ec
+<https://fairmodels.org/ontology/fairmodels.ttl#78122406_4c11_408a_948f_565df25c11ec> rdf:type owl:Class ;
+                                                                                      rdfs:subClassOf :cf4fcf01_ef4c_4fe5_9ae2_461b0fe1d5b4 ;
+                                                                                      rdfs:label "Dataset"@en .
+
+
+###  https://fairmodels.org/ontology/fairmodels.ttl#785afe0a_a7e9_4466_bd5e_c53cdf46d967
+<https://fairmodels.org/ontology/fairmodels.ttl#785afe0a_a7e9_4466_bd5e_c53cdf46d967> rdf:type owl:Class ;
+                                                                                      rdfs:label "Artificial Intelligence Lifecycle Phase"@en .
+
+
+###  https://fairmodels.org/ontology/fairmodels.ttl#95871346_7c6b_4be5_a03c_ab06a31d33ff
+<https://fairmodels.org/ontology/fairmodels.ttl#95871346_7c6b_4be5_a03c_ab06a31d33ff> rdf:type owl:Class ;
+                                                                                      rdfs:subClassOf :cf4fcf01_ef4c_4fe5_9ae2_461b0fe1d5b4 ;
+                                                                                      rdfs:label "AI model"@en .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
