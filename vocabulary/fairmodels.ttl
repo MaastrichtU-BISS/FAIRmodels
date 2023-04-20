@@ -27,7 +27,7 @@
 :ac59abab_10af_469b_852c_f0e84bbfa95a rdf:type owl:ObjectProperty ;
                                       rdfs:domain wikidata:Q11660 ;
                                       rdfs:range <https://fairmodels.org/vocabulary/fairmodels.ttl#639aa44c_d063_49ca_b9d5_035847a431ac> ;
-                                      rdfs:label "contains"@nl .
+                                      rdfs:label "contains"@en .
 
 
 ###  https://fairmodels.org/vocabulary/fairmodels.ttl#c4f8301f_b04a_45f7_a4ad_620e88355a51
@@ -74,17 +74,13 @@
 ###  https://fairmodels.org/vocabulary/fairmodels.ttl#2da4e339_1dfe_4301_9148_cdd9000f7590
 <https://fairmodels.org/vocabulary/fairmodels.ttl#2da4e339_1dfe_4301_9148_cdd9000f7590> rdf:type owl:ObjectProperty ;
                                                                                         owl:inverseOf <https://fairmodels.org/vocabulary/fairmodels.ttl#4a51312a_51fc_46fd_9dba_ee05e90026e8> ;
-                                                                                        rdfs:range :cf4fcf01_ef4c_4fe5_9ae2_461b0fe1d5b4 ,
-                                                                                                   <https://fairmodels.org/vocabulary/fairmodels.ttl#179a6b39_c2a3_4e1b_945a_f2831b936589> ,
-                                                                                                   <https://fairmodels.org/vocabulary/fairmodels.ttl#2b67af40_9f49_4f9a_8b54_852f2b2649a9> ;
+                                                                                        rdfs:range :cf4fcf01_ef4c_4fe5_9ae2_461b0fe1d5b4 ;
                                                                                         rdfs:label "part_of"@en .
 
 
 ###  https://fairmodels.org/vocabulary/fairmodels.ttl#4a51312a_51fc_46fd_9dba_ee05e90026e8
 <https://fairmodels.org/vocabulary/fairmodels.ttl#4a51312a_51fc_46fd_9dba_ee05e90026e8> rdf:type owl:ObjectProperty ;
-                                                                                        rdfs:domain :cf4fcf01_ef4c_4fe5_9ae2_461b0fe1d5b4 ,
-                                                                                                    <https://fairmodels.org/vocabulary/fairmodels.ttl#179a6b39_c2a3_4e1b_945a_f2831b936589> ,
-                                                                                                    <https://fairmodels.org/vocabulary/fairmodels.ttl#2b67af40_9f49_4f9a_8b54_852f2b2649a9> ;
+                                                                                        rdfs:domain :cf4fcf01_ef4c_4fe5_9ae2_461b0fe1d5b4 ;
                                                                                         rdfs:label "has_part"@en .
 
 
@@ -93,6 +89,11 @@
                                                                                         rdfs:domain <https://fairmodels.org/vocabulary/fairmodels.ttl#640d2d72_8c5c_4819_bcc6_64c6b21d7bcb> ;
                                                                                         rdfs:range owl:Thing ;
                                                                                         rdfs:label "generic_term"@en .
+
+
+###  https://fairmodels.org/vocabulary/fairmodels.ttl#70f7701f_7e23_4599_bc9d_b1b1c6def81e
+<https://fairmodels.org/vocabulary/fairmodels.ttl#70f7701f_7e23_4599_bc9d_b1b1c6def81e> rdf:type owl:ObjectProperty ;
+                                                                                        rdfs:label "contributes_to"@en .
 
 
 #################################################################
@@ -194,12 +195,6 @@ wikidata:Q334384 rdf:type owl:Class ;
                                       rdfs:label "Data Collection"@en .
 
 
-###  https://fairmodels.org/vocabulary/fairmodels.ttl#ea010530_8935_4005_bf8a_330593a58a92
-:ea010530_8935_4005_bf8a_330593a58a92 rdf:type owl:Class ;
-                                      rdfs:subClassOf <https://fairmodels.org/vocabulary/fairmodels.ttl#3952e89a_bac3_4e3f_99ce_a103bdb727b0> ;
-                                      rdfs:label "Open question"@en .
-
-
 ###  https://fairmodels.org/vocabulary/fairmodels.ttl#eb2367e9_09cf_4b59_b19a_a5130a2dedf4
 :eb2367e9_09cf_4b59_b19a_a5130a2dedf4 rdf:type owl:Class ;
                                       rdfs:subClassOf <https://fairmodels.org/vocabulary/fairmodels.ttl#785afe0a_a7e9_4466_bd5e_c53cdf46d967> ;
@@ -215,6 +210,12 @@ wikidata:Q334384 rdf:type owl:Class ;
 ###  https://fairmodels.org/vocabulary/fairmodels.ttl#fa8c1446_a037_4139_901c_796b6591e699
 :fa8c1446_a037_4139_901c_796b6591e699 rdf:type owl:Class ;
                                       rdfs:label "Stakeholder"@en .
+
+
+###  https://fairmodels.org/vocabulary/fairmodels.ttl#fe7d51fc_786a_4159_8b6b_fe0795cab0c1
+:fe7d51fc_786a_4159_8b6b_fe0795cab0c1 rdf:type owl:Class ;
+                                      rdfs:subClassOf :cf4fcf01_ef4c_4fe5_9ae2_461b0fe1d5b4 ;
+                                      rdfs:label "AI evaluation"@en .
 
 
 ###  https://fairmodels.org/vocabulary/fairmodels.ttl#ff32c37b_8e83_4e1d_ba5b_ab7d6d3401ab
@@ -259,22 +260,6 @@ wikidata:Q334384 rdf:type owl:Class ;
                                                                                         rdfs:label "ML Engineer"@en .
 
 
-###  https://fairmodels.org/vocabulary/fairmodels.ttl#179a6b39_c2a3_4e1b_945a_f2831b936589
-<https://fairmodels.org/vocabulary/fairmodels.ttl#179a6b39_c2a3_4e1b_945a_f2831b936589> rdf:type owl:Class ;
-                                                                                        rdfs:label "Questionnaire"@en .
-
-
-###  https://fairmodels.org/vocabulary/fairmodels.ttl#2a48b7e8_ff79_4caa_8da0_6695a451bab8
-<https://fairmodels.org/vocabulary/fairmodels.ttl#2a48b7e8_ff79_4caa_8da0_6695a451bab8> rdf:type owl:Class ;
-                                                                                        rdfs:subClassOf <https://fairmodels.org/vocabulary/fairmodels.ttl#3952e89a_bac3_4e3f_99ce_a103bdb727b0> ;
-                                                                                        rdfs:label "Closed question"@en .
-
-
-###  https://fairmodels.org/vocabulary/fairmodels.ttl#2b67af40_9f49_4f9a_8b54_852f2b2649a9
-<https://fairmodels.org/vocabulary/fairmodels.ttl#2b67af40_9f49_4f9a_8b54_852f2b2649a9> rdf:type owl:Class ;
-                                                                                        rdfs:label "Section"@en .
-
-
 ###  https://fairmodels.org/vocabulary/fairmodels.ttl#2cdbd0c2_f0bf_4361_aee0_39fc4b3e03f2
 <https://fairmodels.org/vocabulary/fairmodels.ttl#2cdbd0c2_f0bf_4361_aee0_39fc4b3e03f2> rdf:type owl:Class ;
                                                                                         rdfs:subClassOf <https://fairmodels.org/vocabulary/fairmodels.ttl#639aa44c_d063_49ca_b9d5_035847a431ac> ;
@@ -289,24 +274,13 @@ wikidata:Q334384 rdf:type owl:Class ;
 
 ###  https://fairmodels.org/vocabulary/fairmodels.ttl#27afd272_f6db_48c6_944f_38b0ad64f5b8
 <https://fairmodels.org/vocabulary/fairmodels.ttl#27afd272_f6db_48c6_944f_38b0ad64f5b8> rdf:type owl:Class ;
-                                                                                        rdfs:label "Information Element"@nl .
+                                                                                        rdfs:label "Information Element"@en .
 
 
 ###  https://fairmodels.org/vocabulary/fairmodels.ttl#35b591df_d2f7_4f2b_ab3f_a3d52138f666
 <https://fairmodels.org/vocabulary/fairmodels.ttl#35b591df_d2f7_4f2b_ab3f_a3d52138f666> rdf:type owl:Class ;
                                                                                         rdfs:subClassOf <https://fairmodels.org/vocabulary/fairmodels.ttl#785afe0a_a7e9_4466_bd5e_c53cdf46d967> ;
                                                                                         rdfs:label "Product monitoring"@en .
-
-
-###  https://fairmodels.org/vocabulary/fairmodels.ttl#3952e89a_bac3_4e3f_99ce_a103bdb727b0
-<https://fairmodels.org/vocabulary/fairmodels.ttl#3952e89a_bac3_4e3f_99ce_a103bdb727b0> rdf:type owl:Class ;
-                                                                                        rdfs:label "Question"@en .
-
-
-###  https://fairmodels.org/vocabulary/fairmodels.ttl#458f4f4b_d528_47c4_9a6f_905258eef8da
-<https://fairmodels.org/vocabulary/fairmodels.ttl#458f4f4b_d528_47c4_9a6f_905258eef8da> rdf:type owl:Class ;
-                                                                                        rdfs:subClassOf :cf4fcf01_ef4c_4fe5_9ae2_461b0fe1d5b4 ;
-                                                                                        rdfs:label "answer"@en .
 
 
 ###  https://fairmodels.org/vocabulary/fairmodels.ttl#57cecd50_dd68_4932_974a_f60114d51169
