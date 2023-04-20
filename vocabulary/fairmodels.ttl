@@ -17,9 +17,17 @@
 
 ###  https://fairmodels.org/vocabulary/fairmodels.ttl#a680bf32_f8d5_448f_ab62_b2668db8d443
 :a680bf32_f8d5_448f_ab62_b2668db8d443 rdf:type owl:ObjectProperty ;
-                                      rdfs:domain <https://fairmodels.org/vocabulary/fairmodels.ttl#639aa44c_d063_49ca_b9d5_035847a431ac> ;
+                                      rdfs:domain <https://fairmodels.org/vocabulary/fairmodels.ttl#27afd272_f6db_48c6_944f_38b0ad64f5b8> ,
+                                                  <https://fairmodels.org/vocabulary/fairmodels.ttl#639aa44c_d063_49ca_b9d5_035847a431ac> ;
                                       rdfs:range :d1c8d1c7_1cad_4152_b346_9f4e9e8c3df3 ;
                                       rdfs:label "is_variable_type"@en .
+
+
+###  https://fairmodels.org/vocabulary/fairmodels.ttl#ac59abab_10af_469b_852c_f0e84bbfa95a
+:ac59abab_10af_469b_852c_f0e84bbfa95a rdf:type owl:ObjectProperty ;
+                                      rdfs:domain wikidata:Q11660 ;
+                                      rdfs:range <https://fairmodels.org/vocabulary/fairmodels.ttl#639aa44c_d063_49ca_b9d5_035847a431ac> ;
+                                      rdfs:label "contains"@nl .
 
 
 ###  https://fairmodels.org/vocabulary/fairmodels.ttl#c4f8301f_b04a_45f7_a4ad_620e88355a51
@@ -277,6 +285,11 @@ wikidata:Q334384 rdf:type owl:Class ;
 <https://fairmodels.org/vocabulary/fairmodels.ttl#2641f9c1_41ad_4b48_a82e_774a1fd58e78> rdf:type owl:Class ;
                                                                                         rdfs:subClassOf <https://fairmodels.org/vocabulary/fairmodels.ttl#785afe0a_a7e9_4466_bd5e_c53cdf46d967> ;
                                                                                         rdfs:label "Model development"@en .
+
+
+###  https://fairmodels.org/vocabulary/fairmodels.ttl#27afd272_f6db_48c6_944f_38b0ad64f5b8
+<https://fairmodels.org/vocabulary/fairmodels.ttl#27afd272_f6db_48c6_944f_38b0ad64f5b8> rdf:type owl:Class ;
+                                                                                        rdfs:label "Information Element"@nl .
 
 
 ###  https://fairmodels.org/vocabulary/fairmodels.ttl#35b591df_d2f7_4f2b_ab3f_a3d52138f666

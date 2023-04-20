@@ -1,5 +1,5 @@
 @prefix model: <./stiphout_2011.ttl#>.
-@prefix fml: <https://fairmodels.org/ontology.owl#>.
+@prefix fml: <https://fairmodels.org/vocabulary/fairmodels.ttl#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
@@ -8,36 +8,37 @@
 @prefix icd: <http://purl.bioontology.org/ontology/ICD10/>.
 @prefix uo: <http://purl.obolibrary.org/obo/UO_>.
 @prefix time: <http://www.w3.org/2006/time#>.
+@prefix wikidata: <http://wikidata.org/entity/>.
 
-<./stiphout_2011.ttl> rdf:type fml:Model;
+<./stiphout_2011.ttl> rdf:type fml:95871346_7c6b_4be5_a03c_ab06a31d33ff;
     rdfs:label "Rectal cancer pCR model by van Stiphout et al.";
-    fml:contains_algorithm model:stiphout_2011_clinical_algorithm;
+    fml:4a51312a_51fc_46fd_9dba_ee05e90026e8 model:stiphout_2011_clinical_algorithm;
     fml:needs_information_element model:ctInformationElement;
     fml:needs_information_element model:cnInformationElement;
     fml:needs_information_element model:tLengthInformationElement;
     fml:has_objective model:stiphout_2011_objective.
 
-model:category rdf:type fml:category.
-model:numeric rdf:type fml:numeric.
+model:category rdf:type fml:b24901e2_9008_4ecd_a32e_638cbd000b56.
+model:numeric rdf:type fml:64b5ecc5_c83f_4f90_b51b_535487b7fbc5.
 
-model:ctInformationElement rdf:type fml:InformationElement;
+model:ctInformationElement rdf:type fml:27afd272_f6db_48c6_944f_38b0ad64f5b8;
     rdf:type ncit:C48885;
-    fml:is_variable_type model:category.
+    fml:a680bf32_f8d5_448f_ab62_b2668db8d443 model:category.
 
-model:cnInformationElement rdf:type fml:InformationElement;
+model:cnInformationElement rdf:type fml:27afd272_f6db_48c6_944f_38b0ad64f5b8;
     rdf:type ncit:C48884;
-    fml:is_variable_type model:category.
+    fml:a680bf32_f8d5_448f_ab62_b2668db8d443 model:category.
 
-model:tLengthInformationElement rdf:type fml:InformationElement;
+model:tLengthInformationElement rdf:type fml:27afd272_f6db_48c6_944f_38b0ad64f5b8;
     rdf:type roo:C100074;
-    fml:is_variable_type model:numeric.
+    fml:a680bf32_f8d5_448f_ab62_b2668db8d443 model:numeric.
 
-model:stiphout_2011_clinical_algorithm rdf:type fml:Logistic_Regression;
-    fml:has_input_parameter model:InputFeature_TLength;
-    fml:has_input_parameter model:InputFeature_cTStage;
-    fml:has_input_parameter model:InputFeature_cNStage;
-    fml:has_output_parameter model:OutputFeature_ypT0N0;
-    fml:contains_algorithm model:linear_predictor.
+model:stiphout_2011_clinical_algorithm rdf:type wikidata:Q33331221;
+    fml:ac59abab_10af_469b_852c_f0e84bbfa95a model:InputFeature_TLength;
+    fml:ac59abab_10af_469b_852c_f0e84bbfa95a model:InputFeature_cTStage;
+    fml:ac59abab_10af_469b_852c_f0e84bbfa95a model:InputFeature_cNStage;
+    fml:ac59abab_10af_469b_852c_f0e84bbfa95a model:OutputFeature_ypT0N0;
+    fml:4a51312a_51fc_46fd_9dba_ee05e90026e8 model:linear_predictor.
 
 model:linear_predictor rdf:type fml:linear_predictor;
     fml:contains_operation model:lp_operation.
@@ -63,74 +64,74 @@ model:multiplicationfactor_tLength rdf:type model:multiplication_factor;
     fml:Primary_operation_value_reference model:InputFeature_TLength;
     fml:secondary_operation_value "-0.085"^^xsd:decimal.
 
-model:InputFeature_TLength rdf:type fml:Algorithm_Input_Parameter;
-    fml:model_parameter_name "tLength";
-    fml:is_variable_type model:numeric;
-    fml:based_on_information_element model:tLengthInformationElement.
+model:InputFeature_TLength rdf:type fml:a19846d2_7902_4f46_a043_1e4683a421c6;
+    fml:2745f2ab_90ec_46a6_811c_38b01d5f0cdc "tLength";
+    fml:a680bf32_f8d5_448f_ab62_b2668db8d443 model:numeric;
+    fml:ed51b996_44b9_49ea_8538_7c170266e051 model:tLengthInformationElement.
 
-model:InputFeature_cTStage rdf:type fml:Algorithm_Input_Parameter;
-    fml:model_parameter_name "cT";
-    fml:is_variable_type model:numeric;
-    fml:has_translation [
-        rdf:type fml:value_translation;
-        fml:source_object [ rdf:type ncit:C48719; ];
-        fml:target_value "0"^^xsd:integer;
+model:InputFeature_cTStage rdf:type fml:a19846d2_7902_4f46_a043_1e4683a421c6;
+    fml:2745f2ab_90ec_46a6_811c_38b01d5f0cdc "cT";
+    fml:a680bf32_f8d5_448f_ab62_b2668db8d443 model:numeric;
+    fml:09451ee6_d907_4941_9a3e_2fb3a3d7b15c [
+        rdf:type fml:640d2d72_8c5c_4819_bcc6_64c6b21d7bcb;
+        fml:44c956fc_f54c_4b63_bc4a_b3f2a6a1485b [ rdf:type ncit:C48719; ];
+        fml:efbf0478_74f6_45ab_97be_a9e3987e2aa0 "0"^^xsd:integer;
     ];
-    fml:has_translation [
-        rdf:type fml:value_translation;
-        fml:source_object [ rdf:type ncit:C48720; ];
-        fml:target_value "1"^^xsd:integer;
+    fml:09451ee6_d907_4941_9a3e_2fb3a3d7b15c [
+        rdf:type fml:640d2d72_8c5c_4819_bcc6_64c6b21d7bcb;
+        fml:44c956fc_f54c_4b63_bc4a_b3f2a6a1485b [ rdf:type ncit:C48720; ];
+        fml:efbf0478_74f6_45ab_97be_a9e3987e2aa0 "1"^^xsd:integer;
     ];
-    fml:has_translation [
-        rdf:type fml:value_translation;
-        fml:source_object [ rdf:type ncit:C48724; ];
-        fml:target_value "2"^^xsd:integer;
+    fml:09451ee6_d907_4941_9a3e_2fb3a3d7b15c [
+        rdf:type fml:640d2d72_8c5c_4819_bcc6_64c6b21d7bcb;
+        fml:44c956fc_f54c_4b63_bc4a_b3f2a6a1485b [ rdf:type ncit:C48724; ];
+        fml:efbf0478_74f6_45ab_97be_a9e3987e2aa0 "2"^^xsd:integer;
     ];
-    fml:has_translation [
-        rdf:type fml:value_translation;
-        fml:source_object [ rdf:type ncit:C48728; ];
-        fml:target_value "3"^^xsd:integer;
+    fml:09451ee6_d907_4941_9a3e_2fb3a3d7b15c [
+        rdf:type fml:640d2d72_8c5c_4819_bcc6_64c6b21d7bcb;
+        fml:44c956fc_f54c_4b63_bc4a_b3f2a6a1485b [ rdf:type ncit:C48728; ];
+        fml:efbf0478_74f6_45ab_97be_a9e3987e2aa0 "3"^^xsd:integer;
     ];
-    fml:has_translation [
-        rdf:type fml:value_translation;
-        fml:source_object [ rdf:type ncit:C48732; ];
-        fml:target_value "4"^^xsd:integer;
+    fml:09451ee6_d907_4941_9a3e_2fb3a3d7b15c [
+        rdf:type fml:640d2d72_8c5c_4819_bcc6_64c6b21d7bcb;
+        fml:44c956fc_f54c_4b63_bc4a_b3f2a6a1485b [ rdf:type ncit:C48732; ];
+        fml:efbf0478_74f6_45ab_97be_a9e3987e2aa0 "4"^^xsd:integer;
     ];
-    fml:based_on_information_element model:ctInformationElement.
+    fml:ed51b996_44b9_49ea_8538_7c170266e051 model:ctInformationElement.
 
-model:InputFeature_cNStage rdf:type fml:Algorithm_Input_Parameter;
-    fml:model_parameter_name "cN";
-    fml:is_variable_type model:numeric;
-    fml:has_translation [
-        rdf:type fml:value_translation;
-        fml:source_object [ rdf:type ncit:C48705; ];
-        fml:target_value "0"^^xsd:integer;
+model:InputFeature_cNStage rdf:type fml:a19846d2_7902_4f46_a043_1e4683a421c6;
+    fml:2745f2ab_90ec_46a6_811c_38b01d5f0cdc "cN";
+    fml:a680bf32_f8d5_448f_ab62_b2668db8d443 model:numeric;
+    fml:09451ee6_d907_4941_9a3e_2fb3a3d7b15c [
+        rdf:type fml:640d2d72_8c5c_4819_bcc6_64c6b21d7bcb;
+        fml:44c956fc_f54c_4b63_bc4a_b3f2a6a1485b [ rdf:type ncit:C48705; ];
+        fml:efbf0478_74f6_45ab_97be_a9e3987e2aa0 "0"^^xsd:integer;
     ];
-    fml:has_translation [
-        rdf:type fml:value_translation;
-        fml:source_object [ rdf:type ncit:C48706; ];
-        fml:target_value "1"^^xsd:integer;
+    fml:09451ee6_d907_4941_9a3e_2fb3a3d7b15c [
+        rdf:type fml:640d2d72_8c5c_4819_bcc6_64c6b21d7bcb;
+        fml:44c956fc_f54c_4b63_bc4a_b3f2a6a1485b [ rdf:type ncit:C48706; ];
+        fml:efbf0478_74f6_45ab_97be_a9e3987e2aa0 "1"^^xsd:integer;
     ];
-    fml:has_translation [
-        rdf:type fml:value_translation;
-        fml:source_object [ rdf:type ncit:C48786; ];
-        fml:target_value "2"^^xsd:integer;
+    fml:09451ee6_d907_4941_9a3e_2fb3a3d7b15c [
+        rdf:type fml:640d2d72_8c5c_4819_bcc6_64c6b21d7bcb;
+        fml:44c956fc_f54c_4b63_bc4a_b3f2a6a1485b [ rdf:type ncit:C48786; ];
+        fml:efbf0478_74f6_45ab_97be_a9e3987e2aa0 "2"^^xsd:integer;
     ];
-    fml:has_translation [
-        rdf:type fml:value_translation;
-        fml:source_object [ rdf:type ncit:C48714; ];
-        fml:target_value "3"^^xsd:integer;
+    fml:09451ee6_d907_4941_9a3e_2fb3a3d7b15c [
+        rdf:type fml:640d2d72_8c5c_4819_bcc6_64c6b21d7bcb;
+        fml:44c956fc_f54c_4b63_bc4a_b3f2a6a1485b [ rdf:type ncit:C48714; ];
+        fml:efbf0478_74f6_45ab_97be_a9e3987e2aa0 "3"^^xsd:integer;
     ];
-    fml:based_on_information_element model:cnInformationElement.
+    fml:ed51b996_44b9_49ea_8538_7c170266e051 model:cnInformationElement.
 
-model:OutputFeature_ypT0N0 rdf:type fml:Probability;
+model:OutputFeature_ypT0N0 rdf:type fml:1a3f7856_08da_41c2_8e23_a2fe533e3880;
     rdfs:label "Probability of pathologic complete response";
-    fml:model_parameter_name "ypT0N0";
-    fml:probability_of model:pCR.
+    fml:2745f2ab_90ec_46a6_811c_38b01d5f0cdc "ypT0N0";
+    fml:2b64594b_8034_4d4c_b727_6d24c32b0815 model:pCR.
 
 model:stiphout_2011_objective rdf:type fml:Prediction;
     rdfs:label "Pathologic complete response prediction";
-    fml:model_parameter_name "ypT0N0";
+    fml:2745f2ab_90ec_46a6_811c_38b01d5f0cdc "ypT0N0";
     fml:prediction_of model:pCR;
     fml:based_on_parameter model:OutputFeature_ypT0N0.
 
