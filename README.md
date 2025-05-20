@@ -3,17 +3,17 @@
 Welcome to the FAIRmodels website. This FAIRmodels platform has various components, which are explained below.
 
 ## FAIR Model metadata
-AI/ML model descriptions can be found at [https://v3.fairmodels.org](https://v3.fairmodels.org). This description is based on Model Cards, and extended with several specific fields for search and application of AI models in practice. This repository is using a CEDAR metadata template to describe the metadata.
+AI/ML model descriptions can be found at [https://v2.fairmodels.org](https://v2.fairmodels.org). This description is based on Model Cards, and extended with several specific fields for search and application of AI models in practice. This repository is using a CEDAR metadata template to describe the metadata.
 
 This webpage can also be read by computer systems by requesting for the JSON-LD syntax (as the HTTP accept header). An example is shown below:
 ```
-curl -H "accept: application/json-ld" https://v3.fairmodels.org
+curl -H "accept: application/json-ld" https://v2.fairmodels.org
 ```
 
 Based on the JSON list of received results, the key can be used to retrieve the metadata of a specific model:
 
 ```
-curl -H "accept: application/json-ld" https://v3.fairmodels.org/instance/7d4bd2ce-3ecf-44db-b8e6-30d448d932af
+curl -H "accept: application/json-ld" https://v2.fairmodels.org/instance/3f400afb-df5e-4798-ad50-0687dd439d9b
 ```
 
 ## Actual models and interoperability
