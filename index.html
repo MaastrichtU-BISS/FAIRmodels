@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAIRmodels - FAIR AI Model Repository</title>
+    <meta name="description" content="FAIR descriptions of AI models, which are machine interpretable and human actionable">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Markdown parser -->
+    <script src="https://cdn.jsdelivr.net/npm/marked@11.1.1/marked.min.js"></script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/logo.png">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <img src="assets/img/logo.png" alt="FAIRmodels Logo" class="nav-logo">
+            </div>
+            
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#metadata" class="nav-link">Metadata</a></li>
+                <li><a href="#model-package" class="nav-link">Packaging</a></li>
+                <li><a href="#validation" class="nav-link">Validation</a></li>
+                <li><a href="#search" class="nav-link">Search</a></li>
+                <li><a href="#api" class="nav-link">API</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section (only on home) -->
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Making AI Models <span class="gradient-text">FAIR</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Findable, Accessible, Interoperable, and Reusable AI models for healthcare and beyond
+                </p>
+                <div class="hero-cta">
+                    <a href="https://v3.fairmodels.org" class="btn btn-primary" target="_blank">
+                        Browse Models
+                    </a>
+                    <a href="#metadata" class="btn btn-secondary">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-graphic">
+                <div class="floating-card">
+                    <div class="card-icon">📊</div>
+                    <div class="card-text">
+                        <strong>Machine Interpretable</strong>
+                        <span>JSON-LD & SPARQL</span>
+                    </div>
+                </div>
+                <div class="floating-card">
+                    <div class="card-icon">🔍</div>
+                    <div class="card-text">
+                        <strong>Searchable</strong>
+                        <span>CEDAR Templates</span>
+                    </div>
+                </div>
+                <div class="floating-card">
+                    <div class="card-icon">🐳</div>
+                    <div class="card-text">
+                        <strong>Containerized</strong>
+                        <span>Docker REST API</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div id="content" class="content-area">
+                <!-- Dynamic content loaded here -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>FAIRmodels</h3>
+                    <p>Making AI models findable, accessible, interoperable, and reusable.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Platform</h4>
+                    <ul>
+                        <li><a href="https://v3.fairmodels.org" target="_blank">Browse Models</a></li>
+                        <li><a href="#metadata">Model Metadata</a></li>
+                        <li><a href="#model-package">Create Package</a></li>
+                        <li><a href="#validation">Validate Models</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#api">API Documentation</a></li>
+                        <li><a href="https://github.com/MaastrichtU-BISS/FAIRmodels-model-package" target="_blank">GitHub</a></li>
+                        <li><a href="https://cedar.metadatacenter.org/" target="_blank">CEDAR Templates</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Organization</h4>
+                    <ul>
+                        <li><a href="https://www.biss-institute.com/" target="_blank">BISS Institute</a></li>
+                        <li><a href="https://www.maastrichtuniversity.nl/" target="_blank">Maastricht University</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 FAIRmodels. Licensed under Apache-2.0.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

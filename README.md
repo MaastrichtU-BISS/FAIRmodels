@@ -1,27 +1,57 @@
 # FAIRmodels
 
-Welcome to the FAIRmodels website. This FAIRmodels platform has various components, which are explained below.
+> **Note**: This repository has been converted to a modern static website. The content is now available through [index.html](index.html).
 
-## FAIR Model metadata
-AI/ML model descriptions can be found at [https://v3.fairmodels.org](https://v3.fairmodels.org). This description is based on Model Cards, and extended with several specific fields for search and application of AI models in practice. This repository is using a [CEDAR metadata template](https://cedar.metadatacenter.org/) to describe the metadata of the AI model. One of the items in this metadata is the acutal link to the AI model, which can be retrieved if the metadata author made the model available (with or without authentication/authorization possibilities).
+## Quick Links
 
-This webpage can also be read by computer systems by requesting for the JSON-LD syntax (as the HTTP accept header). An example is shown below:
+- **[View Website](https://fair4ai.github.io/FAIRmodels/)** - Full website with modern design
+- **[Browse Models](https://v3.fairmodels.org)** - Access the model repository
+- **[Model Package](https://github.com/MaastrichtU-BISS/FAIRmodels-model-package)** - Create containerized models
+- **[FAIVOR Dashboard](https://github.com/MaastrichtU-BISS/FAIVOR-Dashboard)** - Validate models locally
+
+## Overview
+
+FAIRmodels is a comprehensive platform for making AI/ML models **Findable**, **Accessible**, **Interoperable**, and **Reusable**. The platform provides:
+
+- 📋 **Model Metadata Repository** - Standardized, machine-interpretable model descriptions
+- 📦 **Model Package System** - Containerize models with standardized REST APIs
+- ✅ **Validation Tools (FAIVOR)** - Validate model performance on local data
+- 🔍 **Search & Query** - JSON-LD and SPARQL interfaces for model discovery
+
+## Documentation
+
+All documentation is now available through the website:
+
+- [Home](content/home.md) - Introduction and overview
+- [Model Metadata](content/metadata.md) - Metadata schema and access
+- [Model Package](content/model-package.md) - Containerization guide
+- [Validation](content/validation.md) - FAIVOR validation tools
+- [Search & Query](content/search.md) - Searching and querying models
+- [API Reference](content/api.md) - Complete API documentation
+- [About](content/about.md) - Project background and team
+
+## Local Development
+
+To run the website locally:
+
+```bash
+# Simple HTTP server with Python
+python -m http.server 8000
+
+# Or with Node.js
+npx http-server
+
+# Then visit http://localhost:8000
 ```
-curl -H "accept: application/json-ld" https://v3.fairmodels.org
-```
 
-Based on the JSON list of received results, the key can be used to retrieve the metadata of a specific model:
+## GitHub Pages
 
-```
-curl -H "accept: application/json-ld" https://v3.fairmodels.org/instance/e46b07fd-fbd5-4466-9e5b-79dfa36d347d
-```
+This website is designed to work with GitHub Pages. The site automatically loads content from markdown files in the `content/` directory.
 
-## Making AI models interoperable
-The actual AI/ML models are Docker images, which contain a standardized REST API to describe input and output of the AI model. This input/output is similar to the input/output defined in the FAIR model metadata. More details on developing the Docker image for a specific model can be found at [https://github.com/MaastrichtU-BISS/FAIRmodels-model-package](https://github.com/MaastrichtU-BISS/FAIRmodels-model-package). Afterwards, the docker image name can be incorporated into the FAIR model metadata.
+## Legacy Documentation
 
-## Evaluating AI models in your own environment
-One of the aims of FAIRmodels is to standardize model execution in a local (hospital) environment. However, before using an AI model, organisations want to test whether the model gives equal performance on the local hospital population, in comparison to the training/validation dataset.
-For this purpose, we developed the FAIVOR (**F**AIR **AI** Validati**o**n and **r**eporting) tool. This tool can be freely downloaded, and executed on a local dataset. For more information, please see [https://github.com/MaastrichtU-BISS/FAIVOR-Dashboard](https://github.com/MaastrichtU-BISS/FAIVOR-Dashboard).
+The original README content is preserved in [README.md.backup](README.md.backup).
 
-## Searching FAIRmodels
-The current webpage contains a rudimentary visualisation of the FAIR model metadata. To search the model metadata, the JSON-LD objects can be loaded into an RDF database system, and afterwards searched using (preferably) SPARQL. One database which can parse JSON-LD objects and make them available in a SPARQL endpoint is [GraphDB](https://www.ontotext.com/products/graphdb/).
+## License
+
+Apache-2.0 - See [LICENSE](LICENSE) for details.
