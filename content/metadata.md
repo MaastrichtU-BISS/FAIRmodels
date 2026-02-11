@@ -76,29 +76,6 @@ Use the model's unique identifier to fetch complete metadata:
 curl -H "accept: application/json-ld" https://v3.fairmodels.org/instance/e46b07fd-fbd5-4466-9e5b-79dfa36d347d
 ```
 
-### Response Format
-
-The JSON-LD response follows a structured schema:
-
-```json
-{
-  "@context": "https://schema.org/",
-  "@type": "SoftwareApplication",
-  "identifier": "e46b07fd-fbd5-4466-9e5b-79dfa36d347d",
-  "name": "Example Prediction Model",
-  "description": "Clinical prediction model for...",
-  "version": "1.0.0",
-  "author": {
-    "@type": "Person",
-    "name": "Dr. Jane Smith"
-  },
-  "applicationCategory": "Machine Learning Model",
-  "operatingSystem": "Docker",
-  "softwareRequirements": "Docker 20.10+",
-  "url": "https://hub.docker.com/r/example/model"
-}
-```
-
 ## 🎯 CEDAR Templates
 
 We use CEDAR (Center for Expanded Data Annotation and Retrieval) templates to ensure consistent, validated metadata. CEDAR provides:
@@ -137,13 +114,6 @@ For clinical AI models, we extend the base schema with healthcare-specific eleme
 - **Disease Stage**: Applicable disease stages or severity
 - **Comorbidities**: Relevant comorbid conditions
 
-### Regulatory & Compliance
-
-- **Privacy Compliance**: HIPAA, GDPR compliance status
-- **Data Protection**: De-identification methods
-- **Regulatory Approval**: FDA, CE mark status
-- **Clinical Guidelines**: Alignment with clinical practice guidelines
-
 ## 🔗 Linked Data & Interoperability
 
 Our JSON-LD metadata enables rich interlinking with other data sources:
@@ -153,15 +123,6 @@ Our JSON-LD metadata enables rich interlinking with other data sources:
 - **Clinical Trials**: Associated clinical trial registrations
 - **Guidelines**: Relevant clinical practice guidelines
 - **Standards**: Compliance with HL7 FHIR, DICOM, etc.
-
-## 📈 Metadata Quality
-
-We ensure high-quality metadata through:
-
-- **Validation Rules**: Automatic checks for completeness and consistency
-- **Peer Review**: Expert review of clinical models
-- **Version Control**: Track metadata changes over time
-- **Deprecation Policies**: Clear handling of outdated models
 
 ## 🚀 Best Practices
 

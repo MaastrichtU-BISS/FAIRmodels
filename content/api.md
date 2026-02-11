@@ -649,18 +649,6 @@ Use with tools like:
 - Postman
 - API code generators
 
-## 🧪 Testing
-
-### Sandbox Environment
-
-Test API calls without affecting production:
-
-**Base URL**: `https://sandbox.fairmodels.org`
-
-- No authentication required
-- Rate limits relaxed
-- Test data available
-- Reset daily
 
 ## 📞 Support
 
@@ -668,7 +656,6 @@ For API questions and issues:
 
 - [GitHub Issues](https://github.com/MaastrichtU-BISS)
 - [Documentation](https://github.com/MaastrichtU-BISS/FAIRmodels-model-package)
-- Email: support@fairmodels.org (check repository for current contact)
 
 ---
 

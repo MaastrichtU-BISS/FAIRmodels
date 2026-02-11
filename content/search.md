@@ -119,81 +119,6 @@ For advanced semantic queries, load the JSON-LD metadata into an RDF database an
 3. **Import Data**: Load JSON-LD files from FAIRmodels
 4. **Query**: Use SPARQL endpoint
 
-### Example SPARQL Queries
-
-#### Find All Models by Author
-
-```sparql
-PREFIX schema: <https://schema.org/>
-
-SELECT ?model ?name ?author
-WHERE {
-  ?model a schema:SoftwareApplication ;
-         schema:name ?name ;
-         schema:author ?authorNode .
-  ?authorNode schema:name ?author .
-  FILTER(CONTAINS(LCASE(?author), "smith"))
-}
-```
-
-#### Models with AUC > 0.80
-
-```sparql
-PREFIX schema: <https://schema.org/>
-
-SELECT ?model ?name ?auc
-WHERE {
-  ?model a schema:SoftwareApplication ;
-         schema:name ?name ;
-         schema:performance ?perf .
-  ?perf schema:auc ?auc .
-  FILTER(?auc > 0.80)
-}
-ORDER BY DESC(?auc)
-```
-
-#### Models by Clinical Domain
-
-```sparql
-PREFIX schema: <https://schema.org/>
-
-SELECT ?model ?name ?category
-WHERE {
-  ?model a schema:SoftwareApplication ;
-         schema:name ?name ;
-         schema:applicationCategory ?category .
-  FILTER(CONTAINS(LCASE(?category), "oncology"))
-}
-```
-
-#### Recent Models
-
-```sparql
-PREFIX schema: <https://schema.org/>
-
-SELECT ?model ?name ?date
-WHERE {
-  ?model a schema:SoftwareApplication ;
-         schema:name ?name ;
-         schema:datePublished ?date .
-}
-ORDER BY DESC(?date)
-LIMIT 10
-```
-
-#### Models with External Validation
-
-```sparql
-PREFIX schema: <https://schema.org/>
-
-SELECT ?model ?name ?validation
-WHERE {
-  ?model a schema:SoftwareApplication ;
-         schema:name ?name ;
-         schema:validation ?validation .
-  ?validation schema:validationType "external" .
-}
-```
 
 ## 🗄️ Setting Up Your Own SPARQL Endpoint
 
@@ -253,32 +178,6 @@ curl -X POST http://localhost:3030/fairmodels/data \
 # Query
 curl http://localhost:3030/fairmodels/sparql \
   --data-urlencode 'query=SELECT * WHERE { ?s ?p ?o } LIMIT 10'
-```
-
-## 🔗 Federated Queries
-
-Combine FAIRmodels data with other linked data sources:
-
-```sparql
-PREFIX schema: <https://schema.org/>
-PREFIX wdt: <http://www.wikidata.org/prop/direct/>
-
-SELECT ?model ?name ?disease ?diseaseLabel
-WHERE {
-  # Local FAIRmodels data
-  ?model a schema:SoftwareApplication ;
-         schema:name ?name ;
-         schema:keywords ?disease .
-  
-  # Federated query to Wikidata
-  SERVICE <https://query.wikidata.org/sparql> {
-    ?diseaseEntity wdt:P31 wd:Q12136 ;
-                   rdfs:label ?diseaseLabel .
-    FILTER(CONTAINS(LCASE(?diseaseLabel), LCASE(?disease)))
-    FILTER(LANG(?diseaseLabel) = "en")
-  }
-}
-LIMIT 10
 ```
 
 ## 📚 Integration Examples
@@ -445,7 +344,6 @@ curl "https://v3.fairmodels.org?sort=name&order=asc"
 
 FAIRmodels uses standard schemas and ontologies:
 
-- **Schema.org**: Base vocabulary for software applications
 - **SNOMED CT**: Clinical terminology
 - **LOINC**: Laboratory and clinical observations
 - **NCIT**: Cancer terminology

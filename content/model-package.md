@@ -260,30 +260,11 @@ curl -X POST http://localhost:8000/predict \
   ]'
 ```
 
-### Environment Variables
-
-Configure your container with environment variables:
-
-```bash
-docker run -e MODEL_TIMEOUT=300 \
-           -e MAX_BATCH_SIZE=100 \
-           -p 8000:8000 \
-           your-dockerhub/model-name
-```
-
-### Volume Mounting
-
-For models that require additional files:
-
-```bash
-docker run -v /path/to/weights:/app/weights \
-           -p 8000:8000 \
-           your-dockerhub/model-name
-```
-
 ## 🎓 Supported Model Types
 
-The package currently supports:
+There is no limit on the REST-API definition. This means as long as the prediction model can be packaged in a docker image, with the previously mentioned REST-API paths, the model would be compliant.
+
+We can envision the following prediciton models would be possible to package:
 
 - **Logistic Regression**: With or without transformations
 - **Linear Regression**: Continuous predictions
@@ -354,8 +335,6 @@ Check the repository for example models:
 
 - Simple logistic regression
 - Logistic regression with preprocessing
-- Deep learning model (TensorFlow)
-- Ensemble model
 - Custom prediction logic
 
 ## 🤝 Contributing

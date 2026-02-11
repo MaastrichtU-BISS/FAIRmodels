@@ -251,11 +251,7 @@ From the dashboard:
 
 ### 2. Prepare Your Data
 
-FAIVOR accepts data in multiple formats:
-- CSV files
-- JSON arrays
-- FHIR resources
-- HL7 messages
+FAIVOR currently only accepts data in csv format. Other formats (e.g. FHIR, OMOP, openEHR) are envisioned for future work.
 
 Your data should include:
 - Input features required by the model
@@ -398,7 +394,6 @@ openssl rand -base64 32
 ## 📚 Additional Resources
 
 - [FAIVOR Paper](https://research-software-directory.org/projects/faivor) - Research Software Directory
-- [JOSS Publication](https://github.com/MaastrichtU-BISS/FAIVOR-Dashboard/tree/main/JOSS%20paper) - Journal article
 - [Technical Documentation](https://github.com/MaastrichtU-BISS/FAIVOR-Dashboard/tree/main/docs)
 - [API Documentation](https://github.com/MaastrichtU-BISS/FAIVOR-ML-Validator)
 
