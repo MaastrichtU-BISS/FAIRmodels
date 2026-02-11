@@ -30,7 +30,7 @@ The FAIRmodels platform is developed by researchers, software engineers, and cli
 - **Dr. Johan van Soest** - Project Lead
   - Assistant Professor at BISS
   - Expert in FAIR data and AI model standardization
-  - [ORCID](https://orcid.org/0000-0003-2548-0330) | [GitHub](https://github.com/jvsoest)
+  - [LinkedIn](https://www.linkedin.com/in/johan-van-soest/) | [ORCID](https://orcid.org/0000-0003-2548-0330) | [GitHub](https://github.com/jvsoest)
 - **Daniel Slob, MSc**
   - PhD student at Maastricht University
   - Focus on AI monitoring in healthcare
